@@ -3,7 +3,7 @@ name: Deploy to Azure Spring Apps
 on:
   push:
     branches:
-      - main  # Set your default branch here
+      - master  # Set your default branch here
 
 jobs:
   build-and-deploy:
