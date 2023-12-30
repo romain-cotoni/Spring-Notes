@@ -34,6 +34,7 @@ public class InitiateDBOnStartUp {
     }
     @PostConstruct
     private void runAfterStartup() {
+        //add datas to db
         System.out.println("Class InitiateDBOnStartUp - runAfterStartup() - creation of fixtures");
 
         Account account;
