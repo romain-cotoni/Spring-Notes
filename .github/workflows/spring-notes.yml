@@ -19,8 +19,8 @@ jobs:
           java-version: '17'  # Set your JDK version here
           distribution: 'temurin'
 
-      - name: Replace USERNAME Strings in application.properties
-        run: sed -i 's/USERNAME/${{ secrets.USERNAME_GITHUB }}/g' src/main/resources/application.properties
+      - name: Replace USERNAME_DB Strings in application.properties
+        run: sed -i 's/USERNAME_DB/${{ secrets.USERNAME_GITHUB }}/g' src/main/resources/application.properties
 
       - name: Replace PASSWORD_DB Strings in application.properties
         run: sed -i 's/PASSWORD_DB/${{ secrets.PASSWORD_POSTGRESQL_GITHUB }}/g' src/main/resources/application.properties
