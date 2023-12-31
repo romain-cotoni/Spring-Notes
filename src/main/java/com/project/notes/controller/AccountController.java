@@ -23,7 +23,7 @@ import java.util.List;
 //@CrossOrigin(origins = {"https://black-tree-097fbec03.4.azurestaticapps.net"}, allowCredentials = "true", maxAge=3600)
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
-@RequestMapping("https://spring-notes.test.azuremicroservices.io/spring-notes/api/account")
+@RequestMapping("https://spring-notes-spring-notes.azuremicroservices.io/api/account")
 public class AccountController {
     private final AccountService accountService;
     private final AuthenticationManager authenticationManager;
