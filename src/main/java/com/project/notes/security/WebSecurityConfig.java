@@ -44,9 +44,9 @@ public class WebSecurityConfig {
         httpSecurity.csrf((csrf) -> csrf.disable())
                 .authorizeRequests()
 //                .requestMatchers(new AntPathRequestMatcher("/api/account/login"),new AntPathRequestMatcher("/api/account/register")).permitAll()
-                .requestMatchers("/**").permitAll()
+                .anyRequest().permitAll()
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                .anyRequest().authenticated()
+                //.anyRequest().authenticated()
                 .and().exceptionHandling((exception)-> exception.authenticationEntryPoint(jwtAuthenticationEntryPoint))
                 .sessionManagement(session-> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
