@@ -14,13 +14,10 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-//@CrossOrigin(origins = {"https://black-tree-097fbec03.4.azurestaticapps.net"}, allowCredentials = "true", maxAge=3600)
-//@CrossOrigin(origins = "*", allowedHeaders = "*")
 @CrossOrigin(origins = {"https://black-tree-097fbec03.4.azurestaticapps.net", "https://www.getpostman.com", "http://localhost:4200/"}, allowCredentials = "true", maxAge=3600)
 @RestController
 @RequestMapping("api/account")
