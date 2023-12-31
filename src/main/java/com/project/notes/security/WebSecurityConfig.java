@@ -43,7 +43,7 @@ public class WebSecurityConfig {
     public SecurityFilterChain configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf((csrf) -> csrf.disable())
                 .authorizeRequests()
-                .requestMatchers(new AntPathRequestMatcher("/api/account/login"),new AntPathRequestMatcher("/api/account/register")).permitAll()
+                .requestMatchers(new AntPathRequestMatcher("https://spring-notes.test.azuremicroservices.io/spring-notes/api/account/login"),new AntPathRequestMatcher("/api/account/register")).permitAll()
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .anyRequest().authenticated()
                 .and().exceptionHandling((exception)-> exception.authenticationEntryPoint(jwtAuthenticationEntryPoint))
