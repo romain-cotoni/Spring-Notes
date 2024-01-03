@@ -39,12 +39,12 @@ public class InitiateDBOnStartUp {
 
         Account account;
         Note note;
-        for(int i=1; i<=10; i++) {
+        for(int i=1; i<=1; i++) {
             account = accountRepository.save(new Account("rom"+i, bcryptEncoder.encode("ssap"), Role.USER));
             account.setFirstname("romain");
             account.setLastname("cotoni");
             accountRepository.save(account);
-            for(int j=1; j<=10; j++) {
+            for(int j=1; j<=1; j++) {
                 if(i==1 && j==1)
                     note = noteRepository.save(new Note("hello"+j, "<font size=\"5\" color=\"#f50a0a\"><b>HELLO WORLD</b></font><div><b style=\"\"><font size=\"5\">&nbsp; &nbsp;&nbsp;</font><font size=\"4\">HELLO 1</font></b></div><div><b style=\"font-size: large;\">&nbsp; &nbsp; &nbsp;</b><font size=\"4\">bla bla bla 1</font></div><div><br></div><div>&nbsp; &nbsp; &nbsp; <font size=\"4\"><b>HELLO 2</b></font></div><div><div><b style=\"font-size: x-large;\">&nbsp; &nbsp; </b><font size=\"4\">bla bla bla 2</font></div><div><font size=\"5\"><br></font><b><font size=\"5\"><br></font></b></div><div><b></b></div></div>"));
                 else
