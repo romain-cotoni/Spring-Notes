@@ -44,19 +44,17 @@ public class NoteService {
 
 
     public NoteDto createNote(int userId, Note note) {
-        boolean owner = true;
+        Right right = Right.OWNER;
         if (note.getTitle().isEmpty() || note.getTitle().isBlank()) note.setTitle("New note");
         Note noteCreated = this.noteRepository.save(new Note(note.getTitle(), note.getContent()));
         Account account = this.accountService.findById(userId).orElseThrow();
-        //account.addNote(noteCreated, owner);
-        accountNoteService.addAccountNoteAssociation(account,noteCreated,owner);
-        //this.accountService.saveAccount(account);
+        accountNoteService.addAccountNoteAssociation(account,noteCreated,right);
         NoteDto noteDto = new NoteDto();
         noteDto.setId(noteCreated.getId());
         noteDto.setTitle(noteCreated.getTitle());
         noteDto.setContent(noteCreated.getContent());
         noteDto.setCreation(noteCreated.getCreation());
-        noteDto.setOwner(owner);
+        noteDto.setRight(right);
         return noteDto;
     }
 
