@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = {"https://black-tree-097fbec03.4.azurestaticapps.net", "https://www.getpostman.com", "http://localhost:4200/"}, allowCredentials = "true", maxAge=3600)
+@CrossOrigin(origins = {"https://black-tree-097fbec03.4.azurestaticapps.net", "https://www.getpostman.com", "http://localhost:4200/", "http://51.77.210/168", "http://vps-a1453f27.vps.ovh.net/"}, allowCredentials = "true", maxAge=3600)
 @RestController
 @RequestMapping("api/account")
 public class AccountController {
