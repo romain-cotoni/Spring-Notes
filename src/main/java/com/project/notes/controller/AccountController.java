@@ -40,6 +40,7 @@ public class AccountController {
 
     @PostMapping("/login")
     public ResponseEntity<AuthResponseDto> login(@RequestBody AuthRequestDto authRequestDto) throws Exception {
+        System.out.println("Hello from 'AccountController' endpoint 'login'");
         // If credential is valid, it uses the JwtTokenUtil class to generate a new access token,
         // which is then attached to the response object of type AuthResponse.
         try {
