@@ -32,7 +32,7 @@ public class InitiateDBOnStartUp {
         this.accountNoteRepository = accountNoteRepository;
         this.bcryptEncoder  = bcryptEncoder;
     }
-    //@PostConstruct
+    @PostConstruct
     private void runAfterStartup() {
         //add datas to db
         System.out.println("Class InitiateDBOnStartUp - runAfterStartup() - creation of fixtures");
