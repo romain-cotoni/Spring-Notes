@@ -23,12 +23,12 @@ public class AccountNoteService {
         return this.accountNoteRepository.findById(compositeId);
     }
 
-    public void addAccountNoteAssociation(Account account, Note note, Boolean owner) {
-        AccountNoteAssociation accountNoteAssociation = new AccountNoteAssociation(account, note, owner);
-        accountNoteRepository.save(accountNoteAssociation);
-    }
+//    public void addAccountNoteAssociation(Account account, Note note, Boolean owner) {
+//        AccountNoteAssociation accountNoteAssociation = new AccountNoteAssociation(account, note, owner);
+//        accountNoteRepository.save(accountNoteAssociation);
+//    }
     public void addAccountNoteAssociation(Account account, Note note, Right right) {
-        AccountNoteAssociation accountNoteAssociation = new AccountNoteAssociation(account, note, false, right);
+        AccountNoteAssociation accountNoteAssociation = new AccountNoteAssociation(account, note, right);
         accountNoteRepository.save(accountNoteAssociation);
     }
 

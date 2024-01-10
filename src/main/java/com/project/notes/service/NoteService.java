@@ -48,7 +48,7 @@ public class NoteService {
         if (note.getTitle().isEmpty() || note.getTitle().isBlank()) note.setTitle("New note");
         Note noteCreated = this.noteRepository.save(new Note(note.getTitle(), note.getContent()));
         Account account = this.accountService.findById(userId).orElseThrow();
-        accountNoteService.addAccountNoteAssociation(account,noteCreated,right);
+        accountNoteService.addAccountNoteAssociation(account, noteCreated, right);
         NoteDto noteDto = new NoteDto();
         noteDto.setId(noteCreated.getId());
         noteDto.setTitle(noteCreated.getTitle());

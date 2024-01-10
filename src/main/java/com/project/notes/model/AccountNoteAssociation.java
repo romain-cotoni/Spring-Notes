@@ -44,21 +44,29 @@ public class AccountNoteAssociation {
         this.accountNoteCompositeKeyId = new AccountNoteCompositeKeyId(account.getId(), note.getId());
     }
 
-    public AccountNoteAssociation(Account account, Note note, Boolean owner) {
-        //super();
+    public AccountNoteAssociation(Account account, Note note, Right right) {
         this.account = account;
         this.note = note;
-        this.owner = owner;
-        this.accountNoteCompositeKeyId = new AccountNoteCompositeKeyId(account.getId(), note.getId());
-    }
-
-    public AccountNoteAssociation(Account account, Note note, Boolean owner, Right right) {
-        this.account = account;
-        this.note = note;
-        this.owner = owner;
         this.right = right;
         this.accountNoteCompositeKeyId = new AccountNoteCompositeKeyId(account.getId(), note.getId());
     }
+
+//    public AccountNoteAssociation(Account account, Note note, Boolean owner) {
+//        //super();
+//        this.account = account;
+//        this.note = note;
+//        this.owner = owner;
+//        this.accountNoteCompositeKeyId = new AccountNoteCompositeKeyId(account.getId(), note.getId());
+//    }
+
+
+//    public AccountNoteAssociation(Account account, Note note, Boolean owner, Right right) {
+//        this.account = account;
+//        this.note = note;
+//        this.owner = owner;
+//        this.right = right;
+//        this.accountNoteCompositeKeyId = new AccountNoteCompositeKeyId(account.getId(), note.getId());
+//    }
 
     //GETTERS & SETTERS
     public AccountNoteCompositeKeyId getAccountNoteCompositeKeyId() {
