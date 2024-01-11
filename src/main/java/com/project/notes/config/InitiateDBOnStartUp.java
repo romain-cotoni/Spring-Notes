@@ -32,7 +32,7 @@ public class InitiateDBOnStartUp {
         this.accountNoteRepository = accountNoteRepository;
         this.bcryptEncoder  = bcryptEncoder;
     }
-    @PostConstruct
+    //@PostConstruct
     private void runAfterStartup() {
         //add datas to db
         System.out.println("Class InitiateDBOnStartUp - runAfterStartup() - creation of fixtures");
@@ -40,9 +40,9 @@ public class InitiateDBOnStartUp {
         Account account;
         Note note;
         for(int i=1; i<=10; i++) {
-            account = accountRepository.save(new Account("rom"+i, bcryptEncoder.encode("ssap"), Role.USER));
-            account.setFirstname("romain");
-            account.setLastname("cotoni");
+            account = accountRepository.save(new Account("rom"+i, bcryptEncoder.encode("pass"), Role.USER));
+            account.setFirstname("john");
+            account.setLastname("doe");
             accountRepository.save(account);
             for(int j=1; j<=10; j++) {
                 if(i==1 && j==1)
