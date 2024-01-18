@@ -40,7 +40,7 @@ public class InitiateDBOnStartUp {
         Account account;
         Note note;
         for(int i=1; i<=10; i++) {
-            account = accountRepository.save(new Account("rom"+i, bcryptEncoder.encode("pass"), Role.USER));
+            account = accountRepository.save(new Account("rom"+i, bcryptEncoder.encode(""), Role.USER));
             account.setFirstname("john");
             account.setLastname("doe");
             accountRepository.save(account);
